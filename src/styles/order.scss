@@ -1,0 +1,26 @@
+.order {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    right: 12vw;
+    top: 25px;
+    bottom: 25px;
+    margin: 10px;
+    width: 100%;
+    background-color: $primary-color;
+    border-radius: 6px;
+    padding-top: 36px ;
+
+    &__title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+
+        text-align: center;
+
+        color: #ffffff;
+    }
+}

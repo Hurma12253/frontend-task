@@ -1,0 +1,94 @@
+.home {
+    position: relative;
+    display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    padding-left: 64px;
+    padding-top: 48px;
+
+    .menu {
+        max-width: 950px;
+
+        &__title {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        &__subtitle {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 28px;
+
+            color: rgba(0, 0, 0, 0.7);
+
+            margin-bottom: 64px;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 36px;
+            column-gap: 80px;
+
+            &__item {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 65% 35%;
+                background: #ffffff;
+                box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.12);
+                border-radius: 20px;
+                position: relative;
+                padding-left: 36px;
+
+                width: 350px;
+                height: 175px;
+
+                &__body {
+                    &__title {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 24px;
+                        margin-bottom: 6px;
+                    }
+
+                    &__subtitle {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+
+                    &__price {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+
+                        position: absolute;
+                        bottom: 16px;
+
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+
+                img {
+                    width: 158px;
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+}
