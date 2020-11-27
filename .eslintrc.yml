@@ -1,0 +1,99 @@
+---
+root: true
+
+env:
+    browser: true
+    es2017: true
+    jest: true
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+    sourceType: module
+
+extends:
+    - plugin:import/errors
+    - plugin:import/warnings
+    - plugin:import/typescript
+    - airbnb
+    - plugin:react/recommended
+    - plugin:@typescript-eslint/recommended
+    - prettier/react
+    - prettier/@typescript-eslint
+    - plugin:prettier/recommended
+
+plugins:
+    - import
+    - react
+    - '@typescript-eslint'
+    - prettier
+
+settings:
+    react:
+        version: detect
+
+    import/resolver:
+        node:
+            extensions:
+                - '.js'
+                - '.jsx'
+                - '.ts'
+                - '.tsx'
+
+            moduleDirectory:
+                - node_modules
+                - src/
+rules:
+    linebreak-style:
+        - error
+        - unix
+
+    quotes:
+        - error
+        - single
+
+    # css module classes is used with naming convention for prefixing modifiers with _
+    no-underscore-dangle: 'off'
+
+    # type definitions trigger this warning while defined in separated `.types` files
+    no-undef: 'off'
+
+    # constructor parameter property triggers this warning
+    # https://www.typescriptlang.org/docs/handbook/classes.html#parameter-properties
+    no-useless-constructor: 'off'
+
+    # https://github.com/typescript-eslint/typescript-eslint/issues/2502
+    no-use-before-define: 'off'
+    '@typescript-eslint/no-use-before-define': error
+
+    prettier/prettier: error
+
+    # Interfaces may be explicitly set as equivalents to another more general interfaces
+    '@typescript-eslint/no-empty-interface': 'off'
+
+    # Using typescript makes this warning undue
+    react/prop-types: 'off'
+
+    react/state-in-constructor:
+        - error
+        - never
+
+    react/jsx-filename-extension:
+        - error
+        - extensions:
+              - '.tsx'
+              - '.jsx'
+
+    # Too cool opportunity to be disabled
+    react/jsx-props-no-spreading: 'off'
+
+    import/extensions:
+        - error
+        - never
+
+    import/prefer-default-export: 'off'
+
+    # Ignoring path aliases
+    import/no-unresolved:
+        - 'error'
+        - ignore: ['@*']

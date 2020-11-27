@@ -1,0 +1,63 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "jsx": "react",
+        "typeRoots": [
+            "node_modules/@types",
+            "typings"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./*"
+            ],
+            "@entities/": [
+                "src/entities/index.ts"
+            ],
+            "@entities/*": [
+                "src/entities/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@const/*": [
+                "src/const/*"
+            ],
+            "@helpers/*": [
+                "src/helpers/*"
+            ],
+            "@styles/*": [
+                "src/styles/*"
+            ],
+            "@stores/*": [
+                "src/stores/*"
+            ],
+            "@api/*": [
+                "src/api/*"
+            ],
+            "@services/*": [
+                "src/services/*"
+            ]
+        }
+    },
+    "include": [
+        "./spec",
+        "./src",
+        "typings/**/*.d.ts"
+    ],
+    "exclude": [
+        "./src/styles"
+    ]
+}

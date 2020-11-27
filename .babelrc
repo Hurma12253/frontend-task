@@ -1,0 +1,48 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "usage",
+                "corejs": "3",
+                "modules": "commonjs",
+                "exclude": ["transform-typeof-symbol"]
+            }
+        ],
+        [
+            "@babel/preset-react",
+            {
+                "useBuildIns": true
+            }
+        ],
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ],
+        [
+            "@babel/plugin-proposal-class-properties",
+            {
+                "loose": true
+            }
+        ],
+        "@babel/plugin-proposal-numeric-separator",
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "corejs": false,
+                "regenerator": true
+            }
+        ],
+        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-proposal-nullish-coalescing-operator"
+    ],
+    "ignore": [
+        "node_modules",
+        "build"
+    ]
+}
