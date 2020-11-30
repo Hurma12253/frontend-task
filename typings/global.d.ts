@@ -23,3 +23,8 @@ interface DishesInfo {
     photoUrl: string;
     priceInDollars: string;
 }
+
+interface Order {
+    product: DishesInfo;
+    qty: number;
+}

@@ -1,17 +1,36 @@
+html {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 9em;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #253861;
+    }
+}
+
 .home {
     position: relative;
     display: flex;
     max-width: 1366px;
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-left: 64px;
     padding-top: 48px;
 
     .menu {
-        max-width: 950px;
-
         &__title {
+            position: sticky;
+            top: 56px;
             font-family: Roboto;
             font-style: normal;
             font-weight: 300;
@@ -20,6 +39,8 @@
         }
 
         &__subtitle {
+            position: sticky;
+            top: 112px;
             font-family: Roboto;
             font-style: normal;
             font-weight: 300;
@@ -46,9 +67,16 @@
                 border-radius: 20px;
                 position: relative;
                 padding-left: 36px;
+                outline: none;
+                cursor: pointer;
+                transition: 0.2s;
 
                 width: 350px;
                 height: 175px;
+
+                &:hover {
+                    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.24);
+                }
 
                 &__body {
                     &__title {
@@ -88,6 +116,10 @@
                     width: 158px;
                     transform: translateY(10px);
                 }
+            }
+
+            @media (max-width: 900px) {
+                grid-template-columns: 1fr;
             }
         }
     }

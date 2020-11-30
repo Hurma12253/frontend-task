@@ -3,9 +3,12 @@ import { makeAutoObservable } from 'mobx';
 class DishesStore {
     dishes: DishesInfo[];
 
+    order: Order[];
+
     constructor() {
         makeAutoObservable(this);
         this.dishes = [];
+        this.order = [];
     }
 
     fetchDishes() {
@@ -21,6 +24,18 @@ class DishesStore {
                     })
                 );
             });
+    }
+
+    addToOrder(id: string, qty: number) {
+        this.order.push({
+            product: this.dishes.find((el) => el.id === id) || {
+                id: 'none',
+                name: 'none',
+                photoUrl: 'none',
+                priceInDollars: 'none',
+            },
+            qty,
+        });
     }
 }
 
