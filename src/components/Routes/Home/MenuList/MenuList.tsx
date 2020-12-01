@@ -1,6 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import classes from '@styles/home.scss';
+import cn from 'classnames';
 import dishesStore from '@stores/dishesStore';
 import MenuListItem from './MenuListItem';
 
@@ -10,7 +11,7 @@ const MenuList: FC = () => {
     }, []);
 
     return (
-        <div className={classes.menu__list}>
+        <div className={cn(classes.menu__list, classes.enabled)}>
             {dishesStore.dishes.map((el) => (
                 <MenuListItem key={Math.random()}>{el}</MenuListItem>
             ))}

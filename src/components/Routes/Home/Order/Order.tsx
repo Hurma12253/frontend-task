@@ -68,7 +68,7 @@ const Order: FC = () => {
                         classes.order__bottom_section__charge,
                         dishesStore.order.length <= 0 ? classes.order__bottom_section__charge__disabled : null
                     )}>
-                    ${dishesStore.order.length <= 0 ? 'Unpayable' : `Charge ${dishesStore.sum}`}
+                    {dishesStore.order.length <= 0 ? 'Unpayable' : `Charge $${dishesStore.sum}`}
                 </div>
             </div>
         </div>

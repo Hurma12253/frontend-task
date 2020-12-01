@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { FC } from 'react';
 import classes from '@styles/home.scss';
 import dishesStore from '@stores/dishesStore';

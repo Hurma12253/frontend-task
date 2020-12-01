@@ -18,7 +18,6 @@ html {
 }
 
 .home {
-    position: relative;
     display: flex;
     max-width: 1366px;
     margin: 0 auto;
@@ -26,6 +25,10 @@ html {
     min-height: 100vh;
     padding-left: 64px;
     padding-top: 48px;
+
+    @media (max-width: 350px){
+        padding: 0;
+    }
 
     .menu {
         &__title {
@@ -57,6 +60,15 @@ html {
             grid-template-columns: 1fr 1fr;
             row-gap: 36px;
             column-gap: 80px;
+
+            @media (max-width: 350px){
+                overflow-y: auto;
+                height: 80vh;
+
+                &.enable{
+                    transform: translateY(500px);
+                }
+            }
 
             &__item {
                 display: grid;
