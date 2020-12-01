@@ -1,0 +1,138 @@
+html {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 9em;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #253861;
+    }
+}
+
+.home {
+    display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 64px;
+    padding-top: 48px;
+
+    @media (max-width: 350px){
+        padding: 0;
+    }
+
+    .menu {
+        &__title {
+            position: sticky;
+            top: 56px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        &__subtitle {
+            position: sticky;
+            top: 112px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 28px;
+
+            color: rgba(0, 0, 0, 0.7);
+
+            margin-bottom: 64px;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 36px;
+            column-gap: 80px;
+
+            @media (max-width: 350px){
+                overflow-y: auto;
+                height: 80vh;
+
+                &.enable{
+                    transform: translateY(500px);
+                }
+            }
+
+            &__item {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 65% 35%;
+                background: #ffffff;
+                box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.12);
+                border-radius: 20px;
+                position: relative;
+                padding-left: 36px;
+                outline: none;
+                cursor: pointer;
+                transition: 0.2s;
+
+                width: 350px;
+                height: 175px;
+
+                &:hover {
+                    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.24);
+                }
+
+                &__body {
+                    &__title {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 24px;
+                        margin-bottom: 6px;
+                    }
+
+                    &__subtitle {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+
+                    &__price {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+
+                        position: absolute;
+                        bottom: 16px;
+
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+
+                img {
+                    width: 158px;
+                    transform: translateY(10px);
+                }
+            }
+
+            @media (max-width: 900px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

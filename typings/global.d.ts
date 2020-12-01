@@ -16,3 +16,15 @@ interface SvgImport {
     url: string;
     toString: () => string;
 }
+
+interface DishesInfo {
+    id: string;
+    name: string;
+    photoUrl: string;
+    priceInDollars: string;
+}
+
+interface Order {
+    product: DishesInfo;
+    qty: number;
+}
